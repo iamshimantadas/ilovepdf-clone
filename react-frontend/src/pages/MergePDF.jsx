@@ -18,7 +18,7 @@ export const MergePDF = () => {
 
         axios({
             method: 'post',
-            url: "http://localhost:3500/merge-pdf",
+            url: `${import.meta.env.VITE_BACKEND_SERVER_URL}/merge-pdf`,
             data: formData,
             headers: { "Content-Type": "multipart/form-data" },
         }).then((res) => {
@@ -37,7 +37,7 @@ export const MergePDF = () => {
                 <h2 className="text-center mb-4">Upload PDFs</h2>
                 <div className="file-input-wrapper text-center">
                     <label htmlFor="file-input" className="custom-file-upload">
-                        Choose PDFs
+                        Choose PDFs To Merge
                     </label>
                     <input type="file" id="file-input" multiple accept="application/pdf" onChange={handleFileChange}
                         style={{ display: "none" }}

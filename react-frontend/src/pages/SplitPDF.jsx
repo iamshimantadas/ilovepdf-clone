@@ -39,7 +39,7 @@ export const SplitPDF = () => {
 
         axios({
             method: 'post',
-            url: "http://localhost:3500/split-pdf",
+            url: `${import.meta.env.VITE_BACKEND_SERVER_URL}/split-pdf`,
             data: formData,
             headers: { "Content-Type": "multipart/form-data" },
         }).then((res) => {
@@ -59,7 +59,7 @@ export const SplitPDF = () => {
                 <h2 className="text-center mb-4">Upload PDF</h2>
                 <div className="file-input-wrapper text-center">
                     <label htmlFor="file-input" className="custom-file-upload">
-                        Choose PDF
+                        Choose PDF & Split Pdf
                     </label>
                     <input type="file" id="file-input" accept="application/pdf" onChange={handleFileChange}
                         style={{ display: "none" }}
