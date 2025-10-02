@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express();
-const pdfmerge = require('../routes/pdfMerge');
-const splitpdf = require('../routes/splitPDF');
-const compresspdf = require('../routes/compressPDF');
+const pdf = require('../routes/pdf.js');
 
-router.use(pdfmerge);
-router.use(splitpdf);
-router.use(compresspdf);
+router.use(pdf);
 
 module.exports = router;
