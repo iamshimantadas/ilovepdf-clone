@@ -14,6 +14,7 @@
     "@sylphide/pdf-actions": "^1.2.5",
     "@vtfk/pdf-splitter": "^1.1.2",
     "compress-pdf": "^0.5.5",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "multer": "^2.0.2",

@@ -1,3 +1,9 @@
+import { Links, Link } from "react-router"
+import { Home } from "./pages/Home"
+import { MergePDF } from "./pages/MergePDF"
+import { SplitPDF } from "./pages/SplitPDF"
+import { CompressPDF } from "./pages/CompressPDF"
+
 
 export const Header = () => {
     return (
@@ -9,10 +15,8 @@ export const Header = () => {
                     <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
                         {/* Logo / Brand */}
-                        <a
-                            href="/"
-                            className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-                        >
+                        
+                            <Link to="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                             <svg
                                 className="bi me-2"
                                 width={40}
@@ -23,29 +27,30 @@ export const Header = () => {
                                 <use xlinkHref="#bootstrap" />
                             </svg>
                             <span className="fs-4 fw-bold">PDFify</span>
-                        </a>
+                            </Link>
+                       
 
                         {/* Navigation */}
                         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-4">
                             <li>
-                                <a href="#" className="nav-link px-3 text-white">
+                                <Link to="/" className="nav-link px-3 text-white">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#merge" className="nav-link px-3 text-white">
+                                <Link to="/merge-pdf" className="nav-link px-3 text-white">
                                     Merge PDF
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#split" className="nav-link px-3 text-white">
+                                <Link to="/split-pdf" className="nav-link px-3 text-white">
                                     Split PDF
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#compress" className="nav-link px-3 text-white">
+                                <Link to="/compress-pdf" className="nav-link px-3 text-white">
                                     Compress PDF
-                                </a>
+                                </Link>
                             </li>
                         </ul>
 

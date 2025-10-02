@@ -1,14 +1,39 @@
+
+
 .hero {
-      padding: 5rem 1rem;
-      background: linear-gradient(90deg, #0d6efd, #1c1f26);
-      color: #fff;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-    }
-    .feature-img {
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.15);
-    }
+  padding: 5rem 1rem;
+  background: linear-gradient(90deg, #0d6efd, #1c1f26);
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.feature-img {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+}
+
+/* Hide the ugly default file input */
+#file-input {
+  display: none;
+}
+
+/* Style its label (acts like the button) */
+label[for="file-input"] {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+label[for="file-input"]:hover {
+  background: #0b5ed7;
+}
