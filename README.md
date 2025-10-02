@@ -32,10 +32,11 @@ https://www.ghostscript.com/releases/gsdnld.html
 ```
 Note: when ghostscript will installed in your system, then you can run this simple command in cmd/terminal: 'gswin64c'
 
-## Naming Rules
+## How to start this project in locally or in server.
 ```
-This naming rule followed accross over this application. for backend(node/express app): Note: N => number
-
-1. Merge Pdf: merge-N-new.pdf
-2. Split Pdf: pdf_N.pdf
+1. First mention your CORS policy inside your node server.js
+2. Make sure to install GHOSTSCRIPT tool inside your os/server.
+3. Install all the necessary node packages inside node/express and react app.
+4. For running react app try: npm install && npm run dev.
+5. For running express app try: npm install && node server.js/nodemon server.js
 ```
