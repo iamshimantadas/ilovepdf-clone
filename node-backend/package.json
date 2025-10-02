@@ -1,0 +1,24 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "test descp",
+  "main": "y",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "shimanta das",
+  "license": "ISC",
+  "dependencies": {
+    "@lpgroup/ghostscript": "^1.9.3",
+    "@sylphide/pdf-actions": "^1.2.5",
+    "@vtfk/pdf-splitter": "^1.1.2",
+    "compress-pdf": "^0.5.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.10",
+    "pdf-lib": "^1.17.1",
+    "pdf-merger-js": "^5.1.2"
+  }
+}
