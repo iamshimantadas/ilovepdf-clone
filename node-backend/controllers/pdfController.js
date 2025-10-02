@@ -115,6 +115,7 @@ async function splitpdf(req, res, next) {
     const pdf_path = "uploads/" + pdf.filename;
     const number = await getTotalFiles();
     const outputPath = "split-" + number + "-new.pdf";
+    let hostAddress = req.protocol+"://"+req.get("host");
 
     try {
         const inputPdfBytes = fs.readFileSync(pdf_path);
@@ -133,7 +134,7 @@ async function splitpdf(req, res, next) {
             const fileName = 'uploads/'+`pdf_${i + 1 + number}.pdf`;
             fs.writeFileSync(fileName, pdfBytes);
 
-            splitFiles.push(fileName);
+            splitFiles.push(hostAddress+"/"+fileName);
         }
 
         res.send({
@@ -146,9 +147,6 @@ async function splitpdf(req, res, next) {
         console.error(err);
         res.send({"status":"success", "message": "Failed to split PDF" });
     }
-    let hostAddress = req.protocol+"://"+req.get("host");
-
-    res.send({ "status": "success", "split_pdf_url": hostAddress + "/uploads/" + outputPath, "message": "pdf generated successfully" }, 201);
 }
 
 module.exports = { mergepdf, compresspdf, splitpdf };
