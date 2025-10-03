@@ -40,3 +40,7 @@ Note: when ghostscript will installed in your system, then you can run this simp
 4. For running react app try: npm install && npm run dev.
 5. For running express app try: npm install && node server.js/nodemon server.js
 ```
+
+### Project preview
+Here is the project preview in below here...
+[Watch the video](https://raw.githubusercontent.com/username/repository/branch/path/to/video.mp4)
